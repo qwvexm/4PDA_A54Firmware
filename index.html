@@ -463,7 +463,7 @@
                     <button class="tab active" onclick="switchTab('requirements')">Требования</button>
                     <button class="tab" onclick="switchTab('install')">Установить</button>
                     <button class="tab" onclick="switchTab('bootloader')">Разблокировать BL</button>
-                    <button class="tab" onclick="switchTab('ota')">Обновления OTA</button>
+                    <button class="tab" onclick="switchTab('ota')">Обновления OTA (не работает)</button>
                 </div>
 
                 <div id="requirements-content" class="tab-content active">
@@ -575,23 +575,28 @@
                         <p>• <a href="https://samfw.com/firmware/SM-A546E/EGY/A546EXXSFDYI1">SM-A546E</a></p>
                         <p>• <a href="https://samfw.com/firmware/SM-A546B/EUX/A546BXXSFDYI1">SM-A546B</a></p>
 
-                        <h4>2. Проверьте разблокировку загрузчика в UI7</h4>
+                        <h4>2. Разблокируйте загрузчик на UI7</h4>
                         <p>Если вы прошили последнюю версию UI7, проверьте следующее:</p>
-                        <p>• Если в разделе «Разблокировка OEM» в настройках для разработчиков указано что-то вроде «Autoblocker» > найдите Autoblocker в настройках и отключите его.</p>
-                        <p>• Если загрузчик разблокирован в UI7, проверьте экран «Нажмите кнопку питания, чтобы продолжить» при запуске.</p>
+                        <p>• Если в разделе «Разблокировка OEM» в настройках для разработчиков указано что-то вроде «Autoblocker» > найдите Autoblocker в настройках и отключите его. После чего включите «Разблокировка OEM».</p>
+					    <p>• Выключите телефон и с зажатой кнопкой уменьшения громкости подключите телефон к ПК</p>
+						<p>• Когда телефон переведется в режим загручика, удерживайте кнопку увеличения громкости в течении нескольких секунд</p>
+						<p>• На экране будет что-то типо такого, нажмите кнопку увеличения громкости еще раз.</p>
+						<img src="readme-res/bootloader/warning_svb.jpg" alt="Unlock" style="max-width: 35%; height: auto; margin: 8px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+						<p>• На телефоне будет проведет сброс до заводских настроек, пройдите настройку подключив устройство к интернету</p>
+						<p>• Проверьте в параметре Для разработчиков что загрузчик действительно разблокирован</p>
+                        <p>• Также чтобы проверить разблокирован загрузчик или нет достаточно просто перезагрузить телефон, если после виброотклика появится текст типо «Нажмите кнопку питания, чтобы продолжить» при запуске. Значит загрузчик разблокирован</p>
                         <img src="readme-res/bootloader/unlock.jpg" alt="Bootloader Unlock" style="max-width: 35%; height: auto; margin: 8px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
 
                         <h4>3. Прошить UI8 с патчем BL</h4>
-                        <p>Скачайте стоковую прошивку с патчем в разделе Дополнения</p>
-                        <p>• Установите стоковую прошивку в программе Odin</p>
+                        <p>Скачайте стоковую прошивку с патчем BL в разделе Дополнения</p>
+                        <p>• Установите ее в программе Odin</p>
                         <img src="readme-res/odin/firmware.png" alt="Odin Firmware Selection" style="max-width: 35%; height: auto; margin: 8px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"><br>
-                        <h4>4. Убедитесь, что всё в порядке</h4>
-                        <p>• Загрузчик разблокирован</p>
+                        <h4>4. Убедитесь, что загрузчик остался разблокированным</h4>
 
                     </div>
                 </div>
 
-                <div id="ota-content" class="tab-content">
+                <div id="NOT-WORK_ota-content" class="tab-content">
                     <div class="content-text">
                         <h3>Программа обновления OTA для LichUI</h3>
 
